@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Textarea } from "@/components/ui/textarea"
-import { Switch } from "@/components/ui/switch"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Textarea } from "@/components/ui/textarea";
+import { Switch } from "@/components/ui/switch";
 
 export function ProfileSettings() {
-  const [activeTab, setActiveTab] = useState("account")
+  const [activeTab, setActiveTab] = useState("account");
 
   return (
     <div className="space-y-6">
@@ -32,7 +32,10 @@ export function ProfileSettings() {
             </div>
             <div>
               <Label htmlFor="bio">Bio</Label>
-              <Textarea id="bio" defaultValue="Content creator and marketing enthusiast." />
+              <Textarea
+                id="bio"
+                defaultValue="Content creator and marketing enthusiast."
+              />
             </div>
             <Button type="submit">Save Changes</Button>
           </form>
@@ -42,14 +45,18 @@ export function ProfileSettings() {
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-lg font-medium">Email Notifications</h3>
-                <p className="text-sm text-muted-foreground">Receive email updates about your account</p>
+                <p className="text-sm text-muted-foreground">
+                  Receive email updates about your account
+                </p>
               </div>
               <Switch />
             </div>
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-lg font-medium">Push Notifications</h3>
-                <p className="text-sm text-muted-foreground">Receive push notifications about new features</p>
+                <p className="text-sm text-muted-foreground">
+                  Receive push notifications about new features
+                </p>
               </div>
               <Switch />
             </div>
@@ -67,6 +74,5 @@ export function ProfileSettings() {
         </TabsContent>
       </Tabs>
     </div>
-  )
+  );
 }
-
