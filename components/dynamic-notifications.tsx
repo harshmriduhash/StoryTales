@@ -1,5 +1,11 @@
-import { Bell } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Bell } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export function DynamicNotifications() {
   return (
@@ -11,9 +17,10 @@ export function DynamicNotifications() {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription>Try the new seasonal campaign templates!</CardDescription>
+        <CardDescription>
+          Try the new seasonal campaign templates!
+        </CardDescription>
       </CardContent>
     </Card>
-  )
+  );
 }
-
