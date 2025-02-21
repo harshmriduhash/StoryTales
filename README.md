@@ -55,8 +55,8 @@ Before you begin, ensure you have the following installed:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-username/tailortales.git
-   cd tailortales
+   git clone "https://github.com/harshmriduhash/StoryTales"
+   cd storytales
    ```
 
 2. **Frontend Setup**  
@@ -135,6 +135,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## **Contact**
 
-For questions or feedback, feel free to contact us at **dev.khalidhossain@gmail.com**.
+For questions or feedback, feel free to contact us at **Harshsahay2709@gmail.com**.
 
 ---

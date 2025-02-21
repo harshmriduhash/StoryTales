@@ -1,9 +1,16 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const useCases = [
   {
@@ -42,20 +49,21 @@ const useCases = [
       "Optimize for SEO and readability",
     ],
   },
-]
+];
 
 export function UseCaseIntegration() {
-  const [activeUseCase, setActiveUseCase] = useState(useCases[0].id)
-  const [currentStep, setCurrentStep] = useState(0)
+  const [activeUseCase, setActiveUseCase] = useState(useCases[0].id);
+  const [currentStep, setCurrentStep] = useState(0);
 
   const handleNextStep = () => {
-    const maxSteps = useCases.find((uc) => uc.id === activeUseCase)?.steps.length || 0
-    setCurrentStep((prev) => Math.min(prev + 1, maxSteps - 1))
-  }
+    const maxSteps =
+      useCases.find((uc) => uc.id === activeUseCase)?.steps.length || 0;
+    setCurrentStep((prev) => Math.min(prev + 1, maxSteps - 1));
+  };
 
   const handlePrevStep = () => {
-    setCurrentStep((prev) => Math.max(prev - 1, 0))
-  }
+    setCurrentStep((prev) => Math.max(prev - 1, 0));
+  };
 
   return (
     <div className="space-y-6">
@@ -81,7 +89,9 @@ export function UseCaseIntegration() {
                     <div
                       key={index}
                       className={`p-4 rounded-md ${
-                        index === currentStep ? "bg-primary text-primary-foreground" : "bg-muted"
+                        index === currentStep
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-muted"
                       }`}
                     >
                       {step}
@@ -93,7 +103,10 @@ export function UseCaseIntegration() {
                 <Button onClick={handlePrevStep} disabled={currentStep === 0}>
                   Previous Step
                 </Button>
-                <Button onClick={handleNextStep} disabled={currentStep === useCase.steps.length - 1}>
+                <Button
+                  onClick={handleNextStep}
+                  disabled={currentStep === useCase.steps.length - 1}
+                >
                   Next Step
                 </Button>
               </CardFooter>
@@ -102,6 +115,5 @@ export function UseCaseIntegration() {
         ))}
       </Tabs>
     </div>
-  )
+  );
 }
-
